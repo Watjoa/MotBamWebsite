@@ -1,0 +1,45 @@
+---
+title: "Media"
+#subtitle: "Written and published during the pandemic in Belgium"
+# author:
+#   - name: Joachim Waterschoot
+#     url: {}
+# date: "12/03/2023"
+# categories: [correlations, regressions, visualization, clustering]
+# image: correlations.jpg
+format: 
+  html:
+    toc: false
+    page-layout: article
+engine: knitr
+---
+
+```{r echo=FALSE, warning=FALSE}
+
+df <- readxl::read_xlsx('themes/citations.xlsx',sheet = 3)
+df <- as.data.frame(df)
+library(DT)
+df$Date <- as.Date(df$Date)
+df <- df[order(df$Date,decreasing=TRUE),]
+
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+           # order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px') 
+
+
+```

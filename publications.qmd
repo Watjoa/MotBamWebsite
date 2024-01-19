@@ -1,0 +1,239 @@
+---
+title: "Scientific publications"
+#subtitle: "Written and published during the pandemic in Belgium"
+# author:
+#   - name: Joachim Waterschoot
+#     url: {}
+# date: "12/03/2023"
+# categories: [correlations, regressions, visualization, clustering]
+# image: correlations.jpg
+format: 
+  html:
+    toc: false
+    page-layout: article
+engine: knitr
+---
+
+::: panel-tabset
+# All
+
+```{r echo=FALSE, warning=FALSE}
+
+df <- readxl::read_xlsx('themes/citations.xlsx',sheet = 2)
+df <- as.data.frame(df)
+library(DT)
+df$Year <- as.numeric(df$Year)
+df <- df[order(df$Year,decreasing=TRUE),]
+df$Year <- as.integer(df$Year)
+df$`Main topic` <- as.factor(df$`Main topic`)
+
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+           # order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Motivation
+
+```{r echo=FALSE, warning=FALSE}
+
+dfsub <- df[which(df$`Main topic`=="Motivation"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Trust and Communication
+
+```{r echo=FALSE, warning=FALSE}
+
+dfsub <- df[which(df$`Main topic`=="Trust"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Risk Perception
+
+```{r echo=FALSE, warning=FALSE}
+# 
+# dfsub <- df[which(df$`Main topic`=="Risk perception"),]
+# dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+# 
+# datatable(dfsub,
+#           escape=FALSE,
+#         #  caption = 'Overview of reports',
+#           filter = 'top',
+#           rownames = FALSE,
+#           extensions = c('Buttons','ColReorder',
+#                          'KeyTable','Responsive'),
+#           options = list(
+#             order = list(list(2, 'desc')),
+#             pageLength = 40,
+#             autoWidth = TRUE,
+#             dom = 'Bfrtip',
+#             buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+#             colReorder = TRUE,
+#             keys = TRUE
+#             )
+#           )  %>%
+#   formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+#   # Format the 'Value' column to display integers without separators
+#   formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Vaccination
+
+```{r echo=FALSE, warning=FALSE}
+
+dfsub <- df[which(df$`Main topic`=="Vaccination"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Well-being
+
+```{r echo=FALSE, warning=FALSE}
+
+dfsub <- df[which(df$`Main topic`=="Well-being"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+
+# Theory and practice
+
+```{r echo=FALSE, warning=FALSE}
+
+dfsub <- df[which(df$`Main topic`=="TheoryPractice"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+```
+:::

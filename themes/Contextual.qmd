@@ -1,0 +1,132 @@
+---
+title: "Contextual predictors"
+description: "Hospitalization load and stringency, communication style and trust"
+image: context.jpg
+format: 
+  html:
+    toc: true
+    toc_depth: 1
+    toc-location: right
+    toc-title: "On this page:"
+engine: knitr
+bibliography: references.bib
+---
+
+Some studies delved into *distal factors* at the societal level, including hospitalization load and measures stringency, while others explored the impact of *proximal factors* such as trust in political authorities, scientific experts, and healthcare providers' communication styles. Additionally, *social factors* linked to lower vaccination rates, such as adherence to conspiracy theories and attitudes toward alternative medicine, were investigated (Bruder & Kunert, 2022; Douglas, 2021; Hornsey, 2020; Pummerer et al., 2022).
+
+## Hospitalization load and stringency
+
+In a population-level analysis spanning from July 2020 to March 2022, we found that **higher hospitalization load correlated with increased autonomous motivation for adhering to sanitary measures**. This effect was mediated by the severity aspect of risk perception, linking daily variation in hospitalization load to daily fluctuations in autonomous motivation. Another long-term study covering 421 days revealed that the impact of hospitalization load on motivation and well-being depends on **the proportionality between stringency of measures and epidemiological conditions**. Imbalanced measures, either too strict or too lenient, resulted in lower need satisfaction, autonomous motivation, more controlled motivation, less adherence to sanitary measures, and increased anxiety and depressive symptoms. These findings emphasize the critical distinction between freedom and autonomy, highlighting that perceived risk influences people's willingness to adhere to safety regulations, which may vary across cultures and societies. In a vignette study during the pandemic, preferences for policy options reflected reciprocal relationships between the stringency of measures, motivation, and risk perception. Younger respondents and those without a partner preferred more contacts during the holiday season for relatedness and autonomy, while those with higher autonomous motivation and risk perception objected, emphasizing the dynamic interplay of these factors in shaping public response to measures.
+
+## Communication style
+
+Several studies investigated the communication strategies employed by public health officials and healthcare workers during different phases of the pandemic. These included efforts to promote physical distancing, encourage vaccine uptake, and engage in dialogue with unvaccinated individuals. A global experiment across 89 countries revealed the differential impact of autonomy-supportive, controlling, and no-message conditions on motivation, with **autonomy-supportive messages showing partial effectiveness**. In a large vignette-based study, communication emphasizing widespread willingness to get vaccinated and protective benefits for others positively influenced vaccination intentions, especially among the initially hesitant. However, the framing of vaccination as a normative and pro-social deed could induce guilt and egoism among some, potentially driving polarization.
+
+Furthermore, a study focused on communication with unvaccinated individuals found that autonomy-supportive communication from healthcare workers fostered autonomy satisfaction and reflection but did not significantly enhance vaccination intentions compared to controlling communication. The study generated interest among healthcare organizations and contributed to discussions on autonomy support, ethical considerations, and the balance between allowing individual freedom and public health goals. **Autonomy-supportive communication involved validating individuals' perspectives, providing information transparently, and allowing them to make well-informed, self-endorsed decisions about vaccination.**
+
+## Trust
+
+Communication style from political authorities and healthcare providers significantly influenced participants' trust, a focus in numerous studies. **Trustful relations lead individuals to willingly follow trusted parties without the need for control or monitoring.** Trust arises when citizens perceive authorities as competent, benevolent, and truthful. Government trust positively predicted COVID-19 vaccination intentions, while belief in conspiracy theories negatively predicted them. Trust in authorities led to greater ownership of vaccination decisions, while conspiracy theories were linked to external regulation and distrust-based amotivation.
+
+**Perceived government trust likely also promotes greater internalization of sanitary measures.** Citizens trusting authorities may view stricter measures as more proportionate to hospitalization rates and risks. Trust plays a critical role in individuals' threshold for proportionality, dynamically varying based on trust in governmental bodies. Conversely, clinging to conspiracy theories may occur when measures are perceived as disproportionate, interfering with basic psychological needs for autonomy and relatedness.
+
+The crucial role of trust extends to medical experts, where trust in medical institutions positively correlated with vaccine acceptance intentions. In contrast, **individuals endorsing alternative medicine exhibited lower vaccine acceptance intentions due to higher levels of distrust-based amotivation**, rooted in a worldview favoring alternative medicine. Overall, these findings emphasize the significance of legitimacy and trustworthiness in political, moral, and scientific authorities during crises, highlighting the importance of upholding high standards even in non-crisis situations.
+
+## Podcasts
+
+::: panel-tabset
+### Nederlands
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/516avkIoEKryWSxOewBXxE?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### French
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/54VIDx7x1BtcgIzcqXWbo4?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### English
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4xHBlYdeF88aLErR9SnJVm?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+:::
+
+## References
+
+::: panel-tabset
+### Scientific publications
+
+```{r echo=FALSE, warning=FALSE}
+
+df <- readxl::read_xlsx('citations.xlsx',sheet = 2)
+df <- as.data.frame(df)
+library(DT)
+df$Year <- as.numeric(df$Year)
+df <- df[order(df$Year,decreasing=TRUE),]
+df$Year <- as.integer(df$Year)
+df$`Main topic` <- as.factor(df$`Main topic`)
+
+
+dfsub <- df[which(df$`Main topic`=="Motivation"|
+                    df$`Main topic`=="Risk perception"|
+                    df$`Main topic`=="Vaccination"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+
+```
+
+### Public reports
+
+```{r echo=FALSE, warning=FALSE}
+df <- readxl::read_xlsx('citations.xlsx',sheet = 1)
+df <- as.data.frame(df)
+library(DT)
+df$Date <- as.Date(df$Date)
+
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = TRUE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px')
+
+
+```
+:::

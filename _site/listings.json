@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/DataRt.html",
+    "items": [
+      "/posts/Data_Set.html",
+      "/posts/Categorical variables.html",
+      "/posts/Correlations.html",
+      "/posts/RegRession.html",
+      "/posts/Structural Modelling.html",
+      "/posts/Clustering.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/Data_Set.html",
+      "/posts/Categorical variables.html",
+      "/posts/Correlations.html",
+      "/posts/RegRession.html",
+      "/posts/Structural Modelling.html",
+      "/posts/Clustering.html",
+      "/themes/Motivation.html",
+      "/themes/Wellbeing.html",
+      "/themes/Contextual.html"
+    ]
+  }
+]

@@ -1,0 +1,156 @@
+---
+format: 
+  html:
+    toc: false
+    toc_depth: 1
+    toc-location: right
+    toc-title: "On this page:"
+    include-in-header: hero-image.html
+listing:
+  - id: reports-listings
+    contents: posts
+    type: grid
+    max-items: 4
+    grid-columns: 4
+    image-height: 20 px
+    fields: [image, date, description, title]
+    sort:
+      - "date"
+  - id: themes-listings
+    contents: themes
+    type: grid
+    max-items: 6
+    grid-columns: 3
+    image-height: 20 px
+    fields: [image, description, title]
+    sort:
+      - "date"
+bibliography: references.bib
+---
+
+```{=html}
+<style type="text/css">
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+
+</style>
+```
+# Latest News
+
+::: {#reports-listings}
+:::
+
+<a href="https://www.motivationbarometer.com">Read more news...</a>
+
+# Themes
+
+::: {#themes-listings}
+:::
+
+# The Motivation Barometer
+
+## How it started
+
+The emergence of the SARS-CoV-2 virus required a swift and coordinated response from policymakers to control its spread (World Health Organization, 2020). Policymakers worldwide sought advice from scientific advisory committees, mainly composed of biomedical experts, including virologists, infectious disease specialists, biostatisticians, and epidemiologists. Although individuals' behavior and adherence to health guidelines are critical in controlling the virus, social scientists, particularly psychologists, were notably underrepresented in advising policymakers with evidence-informed recommendations [@bavel2020].
+
+Policy decisions, although essential for containing the virus, can often be intrusive into people's lives and conflict with basic psychological needs, such as the need for relatedness [@leary2022;@self-det2017]. The unpredictable course of the virus, coupled with the absence of efficient vaccines in 2020 and the gradual vaccine rollout until mid-2021, demanded prolonged adherence efforts from citizens.
+
+The Motivation Barometer project was established to contribute to evidence-based COVID-19 policy and address various psychological aspects affecting individuals. This large-scale, dynamic monitoring system tracked psychological functioning across the pandemic through over a hundred measurement waves, starting on March 19, 2020, one day after Belgium's initial lockdown. The project originated in the Belgian context, but its generic aspects hold relevance for other countries.
+
+
+::: columns
+::: {.column width="45%"}
+<img src="images/BD_2022_057.jpg" style="border-radius: 10px; width: 100%;"/>
+<figcaption style="font-size: 13px;">Sofie Morbée at symposium 'Psychological science meets policy' June 2022, Brussels. Pic by Bart Duriez</figcaption>
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+<img src="images/BD_2022_090.jpg" style="border-radius: 10px; width: 100%;"/>
+<figcaption style="font-size: 13px;">Maarten Vansteenkiste at symposium 'Psychological science meets policy' June 2022, Brussels. Pic by Bart Duriez</figcaption>
+:::
+:::
+
+## What is the Motivation Barometer?
+
+The Motivation Barometer, an extensive online survey conducted throughout the pandemic, metaphorically gauged "psychological pressure" and "morale." Initially, daily surveys were deployed during Belgium's strict lockdown, following participants longitudinally for 10 weeks or longer. Subsequently, data collection adapted to evolving pandemic phases, incorporating both consistent modules (e.g., motivation, basic needs) and ad hoc modules (e.g., attitudes toward vaccination, mask usage). This dynamic approach enabled **data-driven insights into pivotal psychological aspects for policymakers and the public**.
+
+The project, encompassing diverse content and populations, explored **a range of psychological themes—covering behavioral, motivational, cognitive, emotional, and social aspects**. Special attention was given to specific groups, including students, parents, older adults, sportsmen, and unvaccinated individuals. Methodologically, it employed various research designs and statistical methods, including cross-sectional cohorts, longitudinal surveys, experimental designs in vignette and real-life interventions. The study was **theory-driven**, primarily guided by Self-Determination Theory, while also incorporating insights from risk perception, health communication, governmental trust, and conspiracy thinking. This approach transcended a mere descriptive analysis, aiming to understand the psychological processes influencing adherence to sanitary behaviors, well-being, and vaccination willingness, shedding light on variations in people's preferences for COVID-related policy options.
+
+::: columns
+::: {.column width="45%"}
+
+<img src="images/BD_2022_003.jpg" style="border-radius: 10px; width: 100%;"/>
+<figcaption style="font-size: 13px;">Vincent Yzerbyt at symposium 'Psychological science meets policy' June 2022, Brussels. Pic by Bart Duriez</figcaption>
+
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="45%"}
+<img src="images/BD_2022_047.jpg" style="border-radius: 10px; width: 100%;"/>
+<figcaption style="font-size: 13px;">Audience at symposium 'Psychological science meets policy' June 2022, Brussels. Pic by Bart Duriez</figcaption>
+:::
+:::
+
+## Method and analytical approach
+
+Initially launched in Flanders, the Motivation Barometer expanded to include French language questionnaires and participants from Brussels and Wallonia. Participants were recruited online through social media ads and collaborations with national newspapers. No monetary incentives were provided. A total of 483,778 surveys were completed by 321,495 unique individuals across **110 waves**, with an average of 2949 participants per wave. Ad hoc recruitment led to nonrepresentative data, biased towards those with computer and internet access, and motivated individuals. The sample was older, more female, more vaccinated, and more educated than the average Belgian population. To address bias, a weighting procedure was applied based on population statistics, though limitations were acknowledged. Attitudinal data were cautiously presented, and a weighting procedure adjusted for sociodemographic differences. Nonetheless, potential biases and limitations in small datasets were recognized, and the influence of other unmeasured variables on self-selection was acknowledged.
+
+To address potential biases, our analysis and presentation of findings focused on structural relations between psychological variables or between sociodemographic and psychological factors, minimizing the impact of data unrepresentativeness. Rather than reporting absolute numbers, we emphasized relative changes over time and presented findings in a differentiated manner for characteristics not included in the weighting procedure. Careful wording and theory-grounded interpretations were employed to prevent inappropriate conclusions and aid understanding among citizens and policymakers.
+
+::: columns
+::: {.column width="27%"}
+::: 
+::: {.column width="46%"}
+<center>
+![](images/Barometer_Final-zondertekst-transparant.png)
+</center>
+::: 
+::: {.column width="27%"}
+:::
+:::
+
+<!-- :::: {.columns} -->
+
+<!-- ::: {.column width="45%"} -->
+
+<!-- <img src="images/sympo.jpeg" style="border-radius: 10px; width: 100%;"> -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="10%"} -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="45%"} -->
+
+<!-- hey hallow -->
+
+<!-- ::: -->
+
+<!-- :::: -->
+
+<!-- ```{r echo=FALSE} -->
+
+<!-- library(pixture) -->
+
+<!-- paths <- c( -->
+
+<!-- "/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/testttt/images/sympo.jpeg", -->
+
+<!-- "https://watjoa.github.io/download/other_docs/screenshot.png") -->
+
+<!-- pixgallery(paths) -->
+
+<!-- ``` -->

@@ -1,0 +1,89 @@
+---
+title: "The package"
+subtitle: "Perform fancy statistics by yourself. Correct and fast."
+author:
+  - name: Joachim Waterschoot
+    url: {}
+date: "12/03/2023"
+format:
+ html:
+   toc: true
+   toc_float: TRUE
+   page-layout: full
+engine: knitr
+---
+
+<!-- ::: column-body-outset -->
+<!-- ```{r, echo=FALSE,message=FALSE,warning=FALSE} -->
+<!-- # data <- readxl::read_xlsx('publications website.xlsx') -->
+<!-- # data <- as.data.frame(data) -->
+<!-- # data <- data[,c("target groups", -->
+<!-- #             "year","title","domains/topics")] -->
+<!-- # data <- na.omit(data) -->
+<!-- # data$`domains/topics` <- as.character(data$`domains/topics`) -->
+<!-- # data$year <- as.numeric(data$year) -->
+<!-- #  -->
+library(DT)
+#
+# datatable(
+#       data,
+#       escape=FALSE,
+#      # class = 'cell-border stripe',
+#      filter = 'top',
+#      extensions = 'Buttons',
+#       options = list(
+#         pageLength = 20,
+#         lengthMenu = c(10, 20, 50),
+#         dom = 'Bfrtip',
+#         autoWidth = TRUE,
+#         buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+#         search = list(regex = TRUE, caseInsensitive = TRUE),
+#       columnDefs = list(
+#         list(
+#           targets = 4,
+#           render = JS(
+#             "function(data, type, full, meta) {",
+#             "  if (type === 'filter') {",
+#             "    return data.replace(/, /g, '|');",
+#             "  } else {",
+#             "    return data;",
+#             "  }",
+#             "}"
+#           )
+#         )
+#       )
+#     )
+# )
+
+<!-- library(DT); library(crosstalk) -->
+<!-- data <- data.frame( -->
+<!--   ID = 1:5, -->
+<!--   Name = c("Alice", "Bob", "Charlie", "David", "Eva"), -->
+<!--   Categories = c("A", "B", "A", "B, C", "C") -->
+<!-- ) -->
+
+
+<!-- # Convert factor column to character -->
+<!-- data$Categories <- as.character(data$Categories) -->
+
+<!-- # Extract unique categories -->
+<!-- unique_categories <- unique(unlist(strsplit(data$Categories, ", "))) -->
+
+<!-- # Create a DataTable with a crosstalk filter -->
+<!-- datatable( -->
+<!--   data, -->
+<!--   filter = 'top',  # 'top' or 'bottom' for filter placement -->
+<!--   extensions = 'Select', -->
+<!--   options = list( -->
+<!--     pageLength = 10, -->
+<!--     lengthMenu = c(10, 20, 50), -->
+<!--     searching = TRUE -->
+<!--   ), -->
+<!--   selection = 'none' -->
+<!-- ) %>% -->
+<!--   crosstalk::filter_select('Categories', label='Categories', -->
+<!--                            filter_options = list(type = 'multi', values = unique_categories)) -->
+
+
+<!-- ``` -->
+<!-- ::: -->

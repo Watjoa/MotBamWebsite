@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Joachim Waterschoot">
+<meta name="description" content="Check the role of categorical variables">
+
+<title>Work with categorical variables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./logoe.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./logoe.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./reports.html" rel="" target="">
+ <span class="menu-text">REPORTS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./publications.html" rel="" target="">
+ <span class="menu-text">PUBLICATIONS</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://bugs.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#contact-information" id="toc-contact-information" class="nav-link active" data-scroll-target="#contact-information">Contact information <i class="fa fa-phone" aria-hidden="true"></i></a></li>
+  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education <i class="fa fa-graduation-cap" aria-hidden="true"></i></a></li>
+  <li><a href="#scientific-curriculum" id="toc-scientific-curriculum" class="nav-link" data-scroll-target="#scientific-curriculum">Scientific Curriculum <i class="fa fa-clipboard" aria-hidden="true"></i></a>
+  <ul class="collapse">
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a>
+  <ul class="collapse">
+  <li><a href="#by-year" id="toc-by-year" class="nav-link" data-scroll-target="#by-year">By year</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Work with categorical variables</h1>
+</div>
+
+<div>
+  <div class="description">
+    Check the role of categorical variables
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="true">Joachim Waterschoot</a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- setwd('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/watjoa.github.io') -->
+<section id="contact-information" class="level1">
+<h1>Contact information <i class="fa fa-phone" aria-hidden="true"></i></h1>
+<hr>
+<ul>
+<li>Email: Joachim.waterschoot@ugent.be<br>
+</li>
+<li><a href="https://github.com/Watjoa">Github</a><br>
+</li>
+<li><a href="https://www.linkedin.com/in/watjoa">LinkedIn</a><br>
+</li>
+<li><a href="https://www.researchgate.net/profile/Joachim_Waterschoot">Researchgate</a><br>
+</li>
+<li><a href="https://scholar.google.com/citations?user=F-fOgBoAAAAJ&amp;hl=nl">Google Scholar</a></li>
+</ul>
+<p><br></p>
+<p>TO DO’S:</p>
+<ul>
+<li>Mobility: (a) short-term visit or (b) longer-term mobility planned. Goals: to learn new techniques, transfer knowledge, establish/expand collaborations.<br>
+</li>
+<li>Teach a course or mentor students: graduate or undergraduate?<br>
+</li>
+<li>Invite and host a collaborator who will give a workshop in your lab.<br>
+</li>
+<li>(Co-)organise a scientific meeting<br>
+</li>
+<li>Develop a database: specify if it is open-access or restricted<br>
+</li>
+<li>Prepare publications in the popular press: name target magazines, radio programmes, etc. Mention relevant past experience.<br>
+</li>
+<li>Issue Policy paper: name target organisations, explain what relationships will pave the way for conveying your research findings.</li>
+</ul>
+</section>
+<section id="education" class="level1">
+<h1>Education <i class="fa fa-graduation-cap" aria-hidden="true"></i></h1>
+<hr>
+<div class="row">
+<div class="col-md-2">
+<p><em>2017 - 2023</em></p>
+</div>
+<div class="col-md-7">
+<p><strong>PhD candidate in Developmental and Motivational Psychology</strong><br>
+Thesis: The Motivation Barometer during the COVID-19 crisis in Belgium: The Role of Basic Needs, Risk Perception and Motivation predicting Behavior and Well-Being. (Supervisors: Prof.&nbsp;Maarten Vansteenkiste and Prof.&nbsp;Bart Soenens)</p>
+</div>
+<div class="col-md-3">
+<p><i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<p><em>2017 - 2020</em></p>
+</div>
+<div class="col-md-7">
+<p><strong>MSc in Statistical Data Analysis</strong><br>
+Thesis: “It is not the quantity of motivation that matters”: a statistical comparison between Cluster analysis and Latent profile analysis (Supervisors: Prof.&nbsp;Jan De Neve and Prof.&nbsp;Wim Beyers)</p>
+</div>
+<div class="col-md-3">
+<p><i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<p><em>2012 - 2017</em></p>
+</div>
+<div class="col-md-7">
+<p><strong>MSc in Experimental and Theoretical Psychology</strong><br>
+Thesis: Effect of Experimentally Induced Choice on Motivation in Middle Childhood: The Moderating Role of Teacher and Student Characteristics (Supervisor: Prof.&nbsp;Bart Soenens)</p>
+<p>Research internship: The Role of Competence-related Attentional Bias and Resilience in Restoring Thwarted Feelings of Competence at the Department of Developmental Psychology, Ghent University (Supervisor: Prof.&nbsp;Maarten Vansteenkiste)</p>
+</div>
+<div class="col-md-3">
+<p><i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.</p>
+</div>
+</div>
+<p><br> <br></p>
+</section>
+<section id="scientific-curriculum" class="level1">
+<h1>Scientific Curriculum <i class="fa fa-clipboard" aria-hidden="true"></i></h1>
+<hr>
+<section id="publications" class="level2 tabset tabset-fade tabset-pills">
+<h2 class="tabset tabset-fade tabset-pills anchored" data-anchor-id="publications">Publications</h2>
+<section id="by-year" class="level3">
+<h3 class="anchored" data-anchor-id="by-year">By year</h3>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section">2023</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">32. Waterschoot, J., Morbée, S., Soenens, B., Van den Bergh, O., Raemdonck, E., Brisbois, M., Schmitz, M., Klein, O., Luminet, O., Van Oost, P., Yzerbyt, V., &amp; Vansteenkiste, M. (2023). **Psychological need fulfillment as a source of resilience: Its protective role in concerns and symptoms of anxiety and depression during the COVID-19 pandemic.** *Applied psychology. Health and well-being, 10*.1111/aphw.12508. Advance online publication. https://doi.org/10.1111/aphw.12508</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">31. Waterschoot, J., Morbée, S., Van den Bergh, O., Yzerbyt, V., Raemdonck, E., Brisbois, M., Schmitz, M., Klein, O., Luminet, O., Van Oost, P., &amp; Vansteenkiste, M. (2023). **How the Stringency of the COVID-19 Restrictions Influences Motivation for Adherence and Well-Being: The Critical Role of Proportionality.** *International Journal of Health Policy and Management, 12*(1), 1-13. doi: 10.34172/ijhpm.2023.8021</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30. Waterschoot, J., Van Oost, P., Vansteenkiste, M., Bribois, M., Schmitz, M., Morbée, S., Klein, O., Luminet, O., Van den Bergh, O., Raemdonck, E., &amp; Yzerbyt, V. (2023) **Who is Motivated to Accept a Booster and Annual Dose? A Dimensional and Person-Centered Approach.** *Applied Psychology: Health and Well-Being, 15*(4), 1293-1318. https://doi.org/10.1111/aphw.12437</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">29. Waterschoot, J., Yzerbyt, V., Soenens, B., Van den Bergh, O., Morbée, S., Schmitz, M., Van Oost, P., Luminet, O., Klein, O., &amp; Vansteenkiste, M. (2023). **How do vaccination intentions change over time? The role of motivational growth.** *Health psychology, 42*(2), 113–123. https://doi.org/10.1037/hea0001228</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">28. Vansteenkiste, M., Waterschoot, J., Morbée, S., Van Oost, P., Schmitz, M., Klein, O., Luminet, O., Yzerbyt, V., &amp; Van den Bergh, O. (2023). **Psychologicalscience and its societal mission during the SARS-CoV-2 pandemic: The Motivation Barometeras an evidence-informed policy instrument in Belgium.** *Social Issues and Policy Review,* 1–30. https://doi.org/10.1111/sipr.12101</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">27. Sypré, S., Waterschoot, J., Soenens, B., Verschueren, K., &amp; Vansteenkiste, M. (2023). **Do Teachers Use Distinct Motivational Styles for Cognitively Gifted Learners? The Role of Effectiveness Beliefs, Fixed Mindset, and Misconceptions about Giftedness.** *European Journal of Psychology of Education,* 1-27. https://doi.org/10.1007/s10212-023-00716-2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26. Morbée, S., Waterschoot, J., De Muynck, G. J., Haerens, L., Soenens, B., &amp; Vansteenkiste, M. (2023). **Identifying profiles of parental (de) motivating behaviors in youth sports: A multi-informant approach.** *Motivation and Emotion, 47*(6), 990-1006. https://doi.org/10.1007/s11031-023-10040-3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25. van der Kaap‐Deeder, J., Bülow, A., Waterschoot, J., Truyen, I., &amp; Keijsers, L. (2022). **A moment of autonomy support brightens adolescents' mood: Autonomy support, psychological control and adolescent affect in everyday life.** *Child Development, early access.* http://doi.org/10.1111/cdev.13942</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24. Vermote, B., Morbée, S., Soenens, B., Vansteenkiste, M., Waterschoot, J., Beyers, W., &amp; der Kaap-Deeder, V. (2023). **How do late adults experience meaning during the COVID-19 lockdown? The role of intrinsic goals.** *Journal of Happiness,* 1-22. https://doi.org/10.1007/s10902-023-00657-z</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23. Morbée, S., Haerens, L., Soenens, B., Loeys, T., De Clerck, T., Waterschoot, J., &amp; Vansteenkiste, M. (2023). **Predictors and Outcomes of Sports Coaches’ Athlete-Invested Contingent Self-worth.** *Psychology of Sport and Exercise, 69,*102478. https://doi.org/10.1016/j.psychsport.2023.102478</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">22. Desimpelaere, E., Soenens, B., Prinzie, P., Waterschoot, J., Vansteenkiste, M., Morbée, S., Schrooyen, C., &amp; De Pauw, S. (2023). **Parents’ Stress, Parental Burnout, and Parenting Behavior during the COVID-19 Pandemic: Comparing Parents of Children with and without Complex Care Needs.** *Journal of Child Family Studies, 32*, 3681–3696. https://doi.org/10.1007/s10826-023-02702-0</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<!-- <br> -->
+<!-- #### 2022 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2022"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### 2021 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2021"),c('Reference')]) -->
+<!--  kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### 2020 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2020"),c('Reference')]) -->
+<!--  kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### 2019 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2019"),c('Reference')]) -->
+<!--  kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### By theme -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(1:which(Rnew$Periode=="CURRENTLY IN THE RUNNING")),c('Reference','Year','Theme')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") -->
+<!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") -->
+<!--   Rnewh <- Rnew #[which(Rnew$Theme=="covid19"),] -->
+<!--   Rnewh <- Rnewh[,c('Theme','Reference','Year')] -->
+<!--   Rnewh <- Rnewh[order(Rnewh$Theme),] -->
+<!--    kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### By position -->
+<!-- #### First author -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(1:which(Rnew$Periode=="CURRENTLY IN THE RUNNING")),c('Reference','Year','Position')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Position,decreasing=FALSE),] -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$Position <- as.numeric(Rnew$Position) -->
+<!--   Rnewh <- Rnew[which(Rnew$Position==1),] -->
+<!--   Rnewh$numb <- paste(dim(Rnewh)[1]:1,'. ',sep="") -->
+<!--   Rnewh$Reference <- paste(Rnewh$numb,Rnewh$Reference,sep="") -->
+<!--   Rnewh <- Rnewh[,c('Reference','Year')] -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### Second author -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(1:which(Rnew$Periode=="CURRENTLY IN THE RUNNING")),c('Reference','Year','Position')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Position,decreasing=FALSE),] -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$Position <- as.numeric(Rnew$Position) -->
+<!--   Rnewh <- Rnew[which(Rnew$Position==2),] -->
+<!--   Rnewh$numb <- paste(dim(Rnewh)[1]:1,'. ',sep="") -->
+<!--   Rnewh$Reference <- paste(Rnewh$numb,Rnewh$Reference,sep="") -->
+<!--   Rnewh <- Rnewh[,c('Reference','Year')] -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### Co-author -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(1:which(Rnew$Periode=="CURRENTLY IN THE RUNNING")),c('Reference','Year','Position')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Position,decreasing=FALSE),] -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$Position <- as.numeric(Rnew$Position) -->
+<!--   Rnewh <- Rnew[which(Rnew$Position>2),] -->
+<!--   Rnewh$numb <- paste(dim(Rnewh)[1]:1,'. ',sep="") -->
+<!--   Rnewh$Reference <- paste(Rnewh$numb,Rnewh$Reference,sep="") -->
+<!--   Rnewh <- Rnewh[,c('Reference','Year','Position')] -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### Going on -->
+<!-- #### Submitted/In review -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="CURRENTLY IN THE RUNNING"):(which(Rnew$Periode=="OPEN IDEAS")-1)),c('Reference','Year','Theme','Status')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Status),] -->
+<!--   Rnewh <- Rnew[-which(Rnew$Status=="in progress"),] -->
+<!--   Rnewh$numb <- paste(dim(Rnewh)[1]:1,'. ',sep="") -->
+<!--   Rnewh$Reference <- paste(Rnewh$numb,Rnewh$Reference,sep="") -->
+<!--   Rnewh <- Rnewh[,c('Reference','Theme')] -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- #### In progress -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="CURRENTLY IN THE RUNNING"):(which(Rnew$Periode=="OPEN IDEAS")-1)),c('Reference','Year','Theme','Status')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Status),] -->
+<!--   Rnewh <- Rnew[which(Rnew$Status=="in progress"),] -->
+<!--   Rnewh$numb <- paste(dim(Rnewh)[1]:1,'. ',sep="") -->
+<!--   Rnewh$Reference <- paste(Rnewh$numb,Rnewh$Reference,sep="") -->
+<!--   Rnewh <- Rnewh[,c('Reference','Theme')] -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ## Insights  -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(dplyr) -->
+<!-- library(ggplot2) -->
+<!-- library(scholar) -->
+<!-- #library(easyPubMed) -->
+<!-- library(questionr) -->
+<!-- library(ggthemes) -->
+<!-- library(tidyverse) -->
+<!-- library(plotly) -->
+<!-- library(ggplotlyExtra) -->
+<!-- id <- "F-fOgBoAAAAJ" -->
+<!-- pub <- get_publications(id) -->
+<!-- journalfirst <- pub[which(substr(pub$author,1,6)=="J Wate"),c('journal')] -->
+
+<!-- table <- as.data.frame(freq(journalfirst,sort="dec")) -->
+<!-- table$journals <- rownames(table) -->
+<!-- rownames(table) <- NULL -->
+<!-- table <- table[-which(table$journals=="Ghent University"),] -->
+<!-- table <- table[-which(table$journals==""),] -->
+<!-- table <- table[,c('journals','n')] -->
+<!-- colnames(table) <- c('journals as first author','n') -->
+<!-- kable(table, format = "html",escape=FALSE,row.names = F,booktabs = T) -->
+<!-- table <- as.data.frame(freq(pub$journal,sort="dec")) -->
+<!-- table$journals <- rownames(table) -->
+<!-- rownames(table) <- NULL -->
+<!-- table <- table[-which(table$journals=="Ghent University"),] -->
+<!-- table <- table[-which(table$journals==""),] -->
+<!-- table <- table[,c('journals','n')] -->
+<!-- colnames(table) <- c('total journals','n') -->
+<!-- kable(table, format = "html",escape=FALSE,row.names = F,booktabs = T) -->
+<!-- net = get_coauthors(id) -->
+<!-- net <- net[-which(net$coauthors=="About Scholar"),] -->
+<!-- net <- net[-which(net$coauthors=="Search Help"),] -->
+<!-- plot_coauthors(net) -->
+<!-- # hindex <- predict_h_index(id) -->
+<!-- # hindex$years_ahead <- hindex$years_ahead+as.numeric(format(Sys.time(),"%Y")) -->
+<!-- # hindexplot <- ggplot(hindex, aes(years_ahead, h_index)) +  -->
+<!-- #   geom_line(col='blue')+ -->
+<!-- #   geom_point()+ -->
+<!-- #   theme_few()+labs(title="Predicted h-index")+ -->
+<!-- #    scale_x_continuous(breaks=seq(as.numeric(format(Sys.time(),"%Y")), -->
+<!-- #                                  max(hindex$years_ahead), -->
+<!-- #                                  by = 1)) -->
+<!-- # ggplotly(hindexplot) -->
+<!-- citations <- get_citation_history(id) -->
+<!-- citplot <- ggplot(citations, aes(year, cites)) +  -->
+<!--   geom_line(col='blue')+ -->
+<!--   geom_point()+ -->
+<!--   theme_few()+labs(title="Citations by year") -->
+<!-- ggplotly(citplot) -->
+<!-- ``` -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- andi_id <- id -->
+<!-- pubs <- get_publications(andi_id) -->
+<!-- current_year <- as.numeric(format(Sys.Date(), "%Y")) -->
+<!-- all_cites <- map_dfr(pubs$pubid, -->
+<!--                        ~ get_article_cite_history(andi_id, .x)) -->
+<!-- red_pubs <- pubs |> -->
+<!--   mutate(paper_year = year, -->
+<!--          total_cites = cites) |> -->
+<!--   select(title, author, paper_year, journal, pubid, total_cites) -->
+<!-- all_cites_pub <- all_cites |> -->
+<!--   left_join(red_pubs) -->
+<!-- complete_paper_cites <- function(one_paper) { -->
+<!--   expand_years <- setdiff(unique(one_paper$paper_year):current_year, -->
+<!--                           one_paper$year) -->
+<!--   complete(one_paper, -->
+<!--            year = expand_years, -->
+<!--            cites = 0, -->
+<!--            pubid, -->
+<!--            title, -->
+<!--            author, -->
+<!--            paper_year, -->
+<!--            journal, -->
+<!--            total_cites) |> -->
+<!--     arrange(year)   -->
+<!-- }  -->
+<!-- all_cites_filled <- all_cites_pub |> -->
+<!--   group_split(pubid) |> -->
+<!--   map_dfr(complete_paper_cites) |> -->
+<!--   mutate(age = year - paper_year) -->
+<!-- all_cites_cum <- all_cites_filled |> -->
+<!--   group_by(pubid) |> -->
+<!--   mutate(cum_sum = cumsum(cites)) -->
+<!-- plotall <- all_cites_cum |> -->
+<!--   ggplot(aes(x = year, y = cum_sum,  -->
+<!--              colour = reorder(str_trunc(title, 20), desc(total_cites)))) + -->
+<!--   geom_line(linewidth = 1, alpha = 0.5) + -->
+<!--   theme(legend.position = "none") + -->
+<!--   labs(x = "Year", -->
+<!--        y = "Cumulative citations", -->
+<!--        colour = "Paper", -->
+<!--        title = "All the papers")+theme_few() -->
+<!-- ggplotly(plotall) -->
+<!-- min_cites <- 40 -->
+<!-- to_plot <- all_cites_cum |> -->
+<!--   filter(total_cites >= min_cites) -->
+<!-- atleast<- to_plot |> -->
+<!--   ggplot(aes(x = year, -->
+<!--              y = cum_sum, -->
+<!--              colour = reorder(str_trunc(title, 20), desc(total_cites)))) + -->
+<!--   geom_line(size=1)+ -->
+<!--   theme(legend.position = "right", -->
+<!--         legend.directio = "vertical") + -->
+<!--   labs(x = "Year", -->
+<!--        y = "Cumulative citations", -->
+<!--        colour = "Paper", -->
+<!--        title = paste("Papers cited at least", min_cites, "times")) + -->
+<!--   scale_x_continuous(breaks = seq(min(to_plot$year),max(to_plot$year)+2, 2)) + -->
+<!--   scale_y_continuous(breaks = seq(0,ceiling(max(to_plot$cum_sum)/200)*200, 200))+theme_few() -->
+<!-- ggplotly(atleast) -->
+<!-- to_plot <- all_cites_cum |> -->
+<!--   filter(total_cites >= min_cites) -->
+<!-- atleastall <- to_plot |> -->
+<!--   filter(age >= 0 & cum_sum > 0) |> -->
+<!--   ggplot(aes(x = age, -->
+<!--              y = cum_sum, -->
+<!--              colour = reorder(str_trunc(title, 20), desc(total_cites)))) + -->
+<!--   geom_line(size=1)+ -->
+<!--   #stat_smooth(geom="line", linewidth = 1) + -->
+<!--   theme(legend.position = "right", -->
+<!--         legend.directio = "vertical") + -->
+<!--   labs(x = "Age (years)", -->
+<!--        y = "Cumulative citations", -->
+<!--        colour = "Paper", -->
+<!--        title = paste("Papers cited at least", min_cites, "times")) + -->
+<!--   scale_x_continuous(breaks = seq(min(to_plot$age),max(to_plot$age)+2, 1)) + -->
+<!--   scale_y_continuous(trans = "log2")+theme_few() -->
+<!-- ggplotly(atleastall) -->
+<!-- ``` -->
+<!-- ## Public reports -->
+<!-- ### 2023 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="PUBLIC REPORTS"):(which(Rnew$Periode=="LEZINGEN")-1)),c('Reference','Year','Theme')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") -->
+<!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") -->
+<!--   Rnew <- Rnew[,c('Reference','Year')] -->
+<!--    Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2023"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- <center> -->
+<!-- *Overview of motivation across the COVID-19 pandemic in Belgium with published reports.* -->
+<!-- ![](figures_reports-1.png) -->
+<!-- </center> -->
+<!-- <br> -->
+<!-- ### 2022 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!--   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2022"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### 2021 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!--   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2021"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### 2020 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!--   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2020"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ## Conferences -->
+<!-- ### 2023 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="CONFERENCES"):(which(Rnew$Periode=="REVIEWS")-1)),c('Reference','Year','Theme')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") -->
+<!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") -->
+<!--   Rnew <- Rnew[,c('Reference','Year')] -->
+<!--    Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2023"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- ### 2019 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!--   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2019"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br>  -->
+<!-- ### 2018 -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!--   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2018"),c('Reference')]) -->
+<!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br>  -->
+<!-- ## Reviewer -->
+<!-- <!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<p>–&gt; <!-- <!-- library(ftExtra) --> –&gt; <!-- <!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') --> –&gt; <!-- <!-- library(flextable) --> –&gt; <!-- <!--   Rnew <- Rnew[-c(1:9),] --> –&gt; <!-- <!--   Rnew <- Rnew[c(which(Rnew$Periode=="REVIEWS"):(which(Rnew$Periode=="END")-1)),c('Reference','Year')] --> –&gt; <!-- <!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] --> –&gt; <!-- <!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") --> –&gt; <!-- <!--   Rnew$Year <- format(Rnew$Year, format="%Y") --> –&gt;</p>
+<!-- <!--   Rnew <- as.data.frame(Rnew) -->
+<p>–&gt; <!-- <!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] --> –&gt; <!-- <!--   Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") --> –&gt; <!-- <!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") --> –&gt; <!-- <!--   Rnew <- Rnew[,c('Reference','Year')] --> –&gt;</p>
+<!-- <!--   Rnewh <- as.data.frame(Rnew[,c('Reference','Year')]) -->
+<p>–&gt;</p>
+<!-- <!--   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<p>–&gt; <!-- <!-- ``` --> –&gt;</p>
+<!-- <br> -->
+<!-- # Teaching <i class="fa fa-users" aria-hidden="true"></i> -->
+<!-- *** -->
+<!-- ## Experience -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *2020 - current* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- **Motivation Psychology**: Lecture on Interest Theory and co-lecturer since 2023 -->
+<!-- Educational Master -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium. -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *2017 - current* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- **Academic Skills**: Supervision, teaching and evaluation of the courses -->
+<!-- 2nd Bachelor, Psychology -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium. -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *2017 - current* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- **Psychology of the Lifespan**: assigments evaluation of the course -->
+<!-- 3d Bachelor, Psychology -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium. -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *2019 - current* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- **Developmental Psychology**: supervision, organizing, teaching and evaluating of practical sessions and examination of the course. -->
+<!-- 1st Bachelor, Psychology and 2nd Bachelor, Educational Sciences -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium. -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *2017 - 2018* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- **Recent Theories on Developmental Psychology**: supervision, organizing, teaching and evaluating of practical sessions and examination of the course. -->
+<!-- 2nd Bachelor, Psychology -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium. -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- ## Lectures -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[-c(1:9),] -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="LEZINGEN"):(which(Rnew$Periode=="CONFERENCES")-1)),c('Reference','Year','Theme','inst','loc')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y-%m-%d") -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   Rnew <- Rnew[order(Rnew$Year,decreasing=TRUE),] -->
+<!--   Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") -->
+<!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") -->
+<!--   Rnew <- Rnew[,c('Reference','Year','inst','loc')] -->
+<!--   colnames(Rnew) <- c('Topic','Date','Institution','Location') -->
+<!--   kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- ## Master theses supervision -->
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- library(ftExtra) -->
+<!-- Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx') -->
+
+<!-- library(flextable) -->
+<!--   Rnew <- Rnew[c(which(Rnew$Periode=="MASTER THESES"):(which(Rnew$Periode=="PUBLIC REPORTS")-1)),c('Reference','Year','Theme')] -->
+<!--   Rnew <- Rnew[rowSums(is.na(Rnew)) != ncol(Rnew),] -->
+<!--   Rnew$Year <- as.Date(Rnew$Year,format="%Y") -->
+<!--   Rnew$Year <- format(Rnew$Year, format="%Y") -->
+<!--    Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="") -->
+<!--   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="") -->
+<!--   Rnew <- Rnew[,c('Reference','Year','Theme')] -->
+<!--   Rnew <- as.data.frame(Rnew) -->
+<!--   kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL) -->
+<!-- ``` -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- # Media & Podcasts <i class="fa fa-newspaper-o" aria-hidden="true"></i> -->
+<!-- *** -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *02/08/2022* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- 80-plussers zijn al aan vijfde vaccinprik toe -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [DS <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/covid/destand80.pdf) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *23/06/2022* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- Podcast 'Motivationbarometer', episode: Risk perception -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [Spotify <i class="fa fa-spotify" aria-hidden="true"></i>](https://open.spotify.com/episode/2GjCmZTxjONfmgYBNhPNJu?si=7d5da8bf43104ce5) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *06/05/2021* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- Ruim zeven op de tien studenten willen vaccin -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [DM <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/covid/20210506Ruim-zeven-op-de-tien-studenten-willen-vaccin.pdf) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *18/06/2020* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- “Al zevenduizend wandelaars voor 100 km Covid Challenge” -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [Nieuwsblad <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/covid/20200618zevenduizend-wandelaars-voor-100-km-Covid-Cha.pdf) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *20/05/2020* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- De quarantaineparadox: hoe corona ons tijdsbesef verandert -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [Knack <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/covid/20200520knack.pdf) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *28/04/2020* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- Coronavirus - Psychologen: "motivatiecampagne is cruciaal om deze volksmarathon vol te houden" -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [Belga <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/covid/20200428volksmarathon-vol-t.pdf) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-2"> -->
+<!-- *06/03/2020* -->
+<!-- </div> -->
+<!-- <div class = "col-md-7"> -->
+<!-- Universiteit Gent doet onderzoek naar deelname aan de Dodentocht -->
+<!-- </div> -->
+<!-- <div class = "col-md-3"> -->
+<!-- [GVA <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/dodentocht/download-clip_20200306_gazet-van-antwerpen-mechelen-waas_p-22-23.pdf) <br> -->
+<!-- [HLN (1) <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/dodentocht/20200306_Het-Laatste-Nieuws_p-0_Dodentocht-Goesting-zorgt-voor-betere-motivatie-dan-druk.pdf) <br> -->
+<!-- [HLN (2) <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/dodentocht/download-clip_20200307_het-laatste-nieuws-mechelen-lier_p-40-41.pdf) <br> -->
+<!-- [VRT <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/press/dodentocht/vrt_be.pdf) <br> -->
+<!-- [RTV <i class="fa fa-video-camera" aria-hidden="true"></i>](download/press/dodentocht/rtv_be.pdf) <br> -->
+<!-- [Radio 1 <i class="fa fa-microphone" aria-hidden="true"></i>](download/press/dodentocht/Radio1_06032020.mp4) <br> -->
+<!-- [Radio 2 Antw <i class="fa fa-microphone" aria-hidden="true"></i>](download/press/dodentocht/Radio2_Antwerpen_06032020.aac) <br> -->
+<!-- [Radio 2 O-Vl <i class="fa fa-microphone" aria-hidden="true"></i>](download/press/dodentocht/Radio2_OVL_06032020.aac) <br> -->
+<!-- [Joe FM <i class="fa fa-microphone" aria-hidden="true"></i>](download/press/dodentocht/JoeFM_06032020.aac) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- # Awards <i class="fa fa-trophy" aria-hidden="true"></i> -->
+<!-- *** -->
+<!-- <div class = "blue"> -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-8"> -->
+<!-- **October 21, 2021** -->
+<!-- The 'Royal Flemish Academy of Belgium' (KVAB) and the 'Young Academy' annually hand out the **'Distinctions for Scientific Communication'** to scientists with an exceptional merit in scientific communication. The Year Prizes are awarded to researchers who have devoted themselves intensively over the past two years to a concrete project in the field of science communication. -->
+<!-- Text on the website: *Maarten Vansteenkiste, Joachim Waterschoot and Sofie Morbée are awarded the Annual Scientific Communication Prize for their communication on the motivation barometer in the context of the coronapandemic. The motivation barometer has gradually developed into an important policy instrument. There is also strong appreciation for the accompanying excellent website on which the findings are disseminated to a very wide audience through dozens of accessible reports, opinion pieces and media interventions, and which provides an insight into the scientific process.* -->
+<!-- [Watch... <i class="fa fa-youtube-play" aria-hidden="true"></i>](https://www.youtube.com/watch?v=Q_h7re70y_U&feature=emb_title) -->
+<!-- <br> -->
+<!-- [Read more...](https://kvab.be/nl/prijzen/jaarprijzen-wetenschapscommunicatie) -->
+<!-- </div> -->
+<!-- <div class = "col-md-4"> -->
+<!-- <center> -->
+<!-- ![ ](unnamed.png) -->
+<!-- </center> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- # Research visit <i class="fa fa-globe" aria-hidden="true"></i> -->
+<!-- *** -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-4"> -->
+<!-- <div class = "blue"> -->
+<!-- ![ ](ntnu_hoeyde_eng.png) -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- **Invited research visit** <br> -->
+<!-- *November 18 - 24, 2022* -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> NTNY, Trondheim, Norway <br> -->
+<!-- <i class="fa fa-users" aria-hidden="true"></i> Invitation from Prof. Dr. Jolene Van der Kaap-Deeder to teach and to support the research group in data analysis of different research projects, doing this in R. -->
+<!-- <br> -->
+<!-- [Link to research group](https://kvab.be/nl/prijzen/jaarprijzen-wetenschapscommunicatie) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- # Extracurricular activities -->
+<!-- *** -->
+<!-- **2021 – current** -->
+<!-- -  Alumni functioning: GAP (member of steering group: secretary and co-director since 2023)   -->
+<!-- -  AAP representative: Department meeting, Faculty Board, Commission of Scientific Research -->
+<!-- **2017– current** -->
+<!-- -  Alumni functioning: GAP (member of steering group: secretary)   -->
+<!-- -  AAP representative: Department meeting   -->
+<!-- **2015 – 2017** -->
+<!-- -  Alumni functioning: GAP (voluntarily member)   -->
+<!-- -  Student council of the Faculty of Psychology and Educational Sciences (PPSR): President, Member of GSR (General Student Representation), Commission of Reception, Commission of Finance and Staff, Commission of Scientific Research, Faculty Board, Commission of the Course of Education Psychology -->
+<!-- <br>  -->
+<!-- <br>  -->
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Copyright 2023, Joachim Waterschoot</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

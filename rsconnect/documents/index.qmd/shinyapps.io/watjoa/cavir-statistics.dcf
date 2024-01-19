@@ -1,0 +1,13 @@
+name: cavir-statistics
+title:
+username: watjoa
+account: watjoa
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10824203
+bundleId: 8064220
+url: https://watjoa.shinyapps.io/cavir-statistics/
+version: 1
+quarto_version: 1.3.450
+quarto_engines: markdown
+serverRender: FALSE

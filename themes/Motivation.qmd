@@ -1,0 +1,245 @@
+---
+title: "Motivation and risk perception"
+description: "Quality of motivation, lack of motivation and risk perception"
+image: motivation.jpg
+format: 
+  html:
+    toc: true
+    toc_depth: 1
+    toc-location: right
+    toc-title: "On this page:"
+engine: knitr
+bibliography: references.bib
+---
+
+```{=html}
+<style type="text/css">
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+
+</style>
+```
+<br>
+
+<center>
+
+```{mermaid}
+%%| fig-height: 8
+flowchart LR
+      A(Epidemiological situation) --> B(Risk perception)
+      B(Risk perception) --> C(Type of motivation)
+      C(Type of motivation) --> D(Adherence & vaccination intentions)
+      D(Adherence & vaccination intentions) --> A(Epidemiological situation)
+```
+
+</center>
+
+<br> <!-- ::: callout-note --> <!-- Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`. --> <!-- ::: -->
+
+<!-- ::: column-margin -->
+
+<!-- This content will appear in the margin! -->
+
+<!-- ::: -->
+
+<!-- > Blockquote -->
+
+<!-- Here is a footnote reference,[^1] and another. -->
+
+<!-- [^1]: Here is the footnote. -->
+
+## Quality and Lack of motivation
+
+Motivation referred to the population's commitment to adhering to sanitary measures and accepting vaccines, exploring predictive validity and proximal predictors related to motivation. Utilizing a theory-grounded approach rooted in Self-Determination Theory (SDT), the study differentiates **types of motivation**, ranging from external regulation to integrated regulation, reflecting increasing self-endorsement. Autonomous regulation consistently predicted both concurrent and future adherence to sanitary measures and vaccination, while introjected regulation had short-term benefits, and external regulation exhibited negative outcomes in the long run. Cross-cultural investigations supported the positive association between autonomous regulation and adherence to physical distancing measures.
+
+A second set of findings demonstrated the critical role of **motivation as a precursor to the epidemiological situation**, influencing infection rates and hospitalization rates. Autonomous regulation predicted lower infection rates six weeks later, emphasizing the importance of supporting citizens' self-endorsement for adherence to mitigate infection risks. Similarly, autonomous regulation for vaccination positively predicted vaccination intentions, uptake, and future behavior, highlighting the sustained impact of self-endorsed motivation. Contrarily, external regulation exhibited a backfiring effect over time, particularly concerning booster and annual vaccine intentions. The findings underscore the need for citizens to internalize the significance of public health regulations for long-term engagement.
+
+The study also distinguished between two **types of amotivation** regarding vaccination intentions: distrust-based and effort-based. *Distrust-based amotivation* negatively impacted vaccine acceptance, concurrently and longitudinally, contributing to increasing reluctance over time. *Effort-based amotivation*, on the other hand, showed no significant association with vaccination intentions, potentially due to the efficient vaccination process in Belgium. Profiling analyses revealed the heterogeneous nature of unvaccinated individuals, with different groups characterized by varying combinations of reasons for (not) getting vaccinated.
+
+::: panel-tabset
+# Adherence
+
+::: {.flourish-embed .flourish-chart data-src="visualisation/11452086"}
+```{=html}
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+```
+:::
+
+# Motivation
+
+::: {.flourish-embed .flourish-chart data-src="visualisation/11443548"}
+```{=html}
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+```
+:::
+:::
+
+<!-- ::: column-margin -->
+
+<!-- ::: -->
+
+## Risk perception
+
+Several Motivation Barometer studies explored the pivotal role of internalized motivation, particularly examining risk perception as a significant driver. Risk perception, encompassing the likelihood of infection and anticipated severity of symptoms, was assessed concerning both individual and population health. While risk perception is established in health behavior theories, its connection to internalization of health behaviors was novel and investigated within the Motivation Barometer project. **Studies revealed that risk perception, especially its severity aspect, played a crucial role in underpinning autonomous regulation for both sanitary measures and vaccination uptake**. Notably, risk perception varied over time in response to changing hospitalization rates, influencing the internalization of sanitary measures. In a population-level analysis spanning from July 2020 to March 2022, we found that higher hospitalization load correlated with increased autonomous motivation for adhering to sanitary measures. This effect was mediated by the severity aspect of risk perception, linking daily variation in hospitalization load to daily fluctuations in autonomous motivation. Elevated risk strengthened adherence, but decreased risk made measures seem disproportionate, leading to external regulation.
+
+The internalization-enhancing role of risk severity proved robust across different virus variants (alpha, delta, omicron) and among both vaccinated and unvaccinated individuals. Notably, unvaccinated individuals perceived lower risk for severe illness on average, contributing to decreased autonomous motivation and increased reluctance for vaccination. These findings highlight the dynamic nature of risk perception and its impact on the internalization of health behaviors, underscoring the need for nuanced interventions based on evolving risk levels.
+
+::: panel-tabset
+# Risk perception
+
+::: {.flourish-embed .flourish-chart data-src="visualisation/11452225"}
+```{=html}
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+```
+:::
+
+# By vaccination status
+
+::: {.flourish-embed .flourish-chart data-src="visualisation/11707554"}
+```{=html}
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+```
+:::
+:::
+
+## Podcasts
+
+::: columns
+::: {.column width="48%"}
+### Motivation
+
+::: panel-tabset
+### Nederlands
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0jZRIorli8a9xmMktri3j3?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### French
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5EWFfll9DDzNoJEiWTz75p?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### English
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/61xDVnLR9hKM6jikmIJB1a?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+### Risk perception
+
+::: panel-tabset
+### Nederlands
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/2GjCmZTxjONfmgYBNhPNJu?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### French
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/66KRjcBMWP3neHrNuFNiai?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### English
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5lheu23LADtf9QznFEV134?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+:::
+:::
+:::
+
+## References
+
+::: panel-tabset
+### Scientific publications
+
+```{r echo=FALSE, warning=FALSE}
+
+df <- readxl::read_xlsx('citations.xlsx',sheet = 2)
+df <- as.data.frame(df)
+library(DT)
+df$Year <- as.numeric(df$Year)
+df <- df[order(df$Year,decreasing=TRUE),]
+df$Year <- as.integer(df$Year)
+df$`Main topic` <- as.factor(df$`Main topic`)
+
+
+dfsub <- df[which(df$`Main topic`=="Motivation"|
+                    df$`Main topic`=="Risk perception"|
+                    df$`Main topic`=="Vaccination"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+
+```
+
+### Public reports
+
+```{r echo=FALSE, warning=FALSE}
+df <- readxl::read_xlsx('citations.xlsx',sheet = 1)
+df <- as.data.frame(df)
+library(DT)
+df$Date <- as.Date(df$Date)
+
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = TRUE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px')
+
+
+```
+:::

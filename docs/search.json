@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "Literature.html",
+    "href": "Literature.html",
+    "title": "The package",
+    "section": "",
+    "text": "library(DT) # # datatable( # data, # escape=FALSE, # # class = ‘cell-border stripe’, # filter = ‘top’, # extensions = ‘Buttons’, # options = list( # pageLength = 20, # lengthMenu = c(10, 20, 50), # dom = ‘Bfrtip’, # autoWidth = TRUE, # buttons = c(‘copy’, ‘csv’, ‘excel’, ‘pdf’, ‘print’), # search = list(regex = TRUE, caseInsensitive = TRUE), # columnDefs = list( # list( # targets = 4, # render = JS( # “function(data, type, full, meta) {”, # ” if (type === ‘filter’) {“, #” return data.replace(/, /g, ‘|’);“, #” } else {“, #” return data;“, #” }“, #”}” # ) # ) # ) # ) # )"
+  },
+  {
+    "objectID": "themes/Wellbeing.html",
+    "href": "themes/Wellbeing.html",
+    "title": "Mental health",
+    "section": "",
+    "text": "During the SARS-CoV-2 pandemic, especially teenagers and young adults experienced mental health challenges. Monitoring included well-being and ill-being indicators. Mental health deterioration resulted from chronic health concerns and frustration of basic psychological needs. Buffering factors, such as emotion regulation, were explored to understand the heterogeneity in people’s mental health."
+  },
+  {
+    "objectID": "themes/Wellbeing.html#concerns",
+    "href": "themes/Wellbeing.html#concerns",
+    "title": "Mental health",
+    "section": "Concerns",
+    "text": "Concerns\nConcerns, defined as states of insecurity and apprehension, were highly pertinent during the pandemic, particularly regarding health and the unpredictable evolution of the situation (e.g., Charilaou & Vijaykumar, 2023). Various factors influenced health concerns, including the threat of insufficient hospital capacity, media reports, and personal infection risks. Studies explored the impact of concerns and factors buffering or amplifying their effects. A week-to-week analysis in the initial 10 weeks of the crisis revealed that higher COVID-19-related concerns were associated with increased ill-being and decreased well-being. Emotional regulation styles, such as emotional dysregulation and suppression, influenced vulnerability to symptoms of ill-being. Emotional dysregulation amplified the link between weekly concerns and depressive symptoms, while integrative emotion regulation strengthened the association between weekly concerns and anxiety. These findings align with a cross-sectional study during the first lockdown, identifying emotional regulation profiles linked to mental health outcomes (Waterschoot et al., 2022).\nIn a quasi-experimental study involving school personnel during SARS-CoV-2 outbreaks in schools, weekly saliva testing for virus identification served as a buffer against rising health concerns. However, this did not impact general well-being, and the most significant decreases in health concerns occurred in schools where personnel strongly supported the testing initiative (Van de Casteele et al., 2022)."
+  },
+  {
+    "objectID": "themes/Wellbeing.html#basic-psychological-needs",
+    "href": "themes/Wellbeing.html#basic-psychological-needs",
+    "title": "Mental health",
+    "section": "Basic psychological needs",
+    "text": "Basic psychological needs\nThe SARS-CoV-2 crisis not only heightened individuals’ concerns but also posed threats to the satisfaction of basic psychological needs for autonomy, competence, and relatedness. These needs are recognized as vital for mental health within Self-Determination Theory (SDT) and more broadly (Ryan et al., 2021; Vansteenkiste et al., 2020; Fiske, 2018). The crisis led to frustrations of these basic needs, resulting in experiences of pressure, loneliness, and inadequacy. For instance, imposed health regulations may have reduced autonomy and relatedness satisfaction, while lockdowns presented opportunities for enhanced need satisfaction through personal interests, skill development, and creative connections with others. The effects on basic needs varied across individuals and over time.\nThe Motivation Barometer project explored the role of concerns and basic needs in mental health, revealing that, after controlling for concerns, basic need satisfaction was positively associated with individuals’ mental health. This effect was observed across various populations, including parents, students, and the elderly, highlighting the growth-fostering role of need satisfaction during the pandemic. A longitudinal study spanning two years found that need satisfaction served as a source of resilience, predicting lower health concerns and mitigating the impact of such concerns on symptoms of depression and anxiety. Leveraging these insights, successful e-health interventions were developed to foster need crafting, need satisfaction, and mental health in adults and university students."
+  },
+  {
+    "objectID": "themes/Wellbeing.html#vulnerable-groups",
+    "href": "themes/Wellbeing.html#vulnerable-groups",
+    "title": "Mental health",
+    "section": "Vulnerable groups",
+    "text": "Vulnerable groups\nThe basic psychological needs framework sheds light on societal disparities during the crisis. Young adults reported poorer mental health due to heightened frustration of their needs for relatedness and autonomy. The observed polarization between vaccinated and unvaccinated individuals, as well as the rebellious attitude of some unvaccinated persons, can be attributed to increased social exclusion and autonomy frustration experienced by the latter group. The introduction of the COVID-19 certificate particularly impacted the autonomy and relatedness needs of unvaccinated individuals, contributing to reactance. (Waterschoot, Morbée, Soenens, et al., 2023; de Figueiredo & Larson, 2021; Waterschoot, Yzerbyt, et al., 2023; Van Petegem et al., 2015)."
+  },
+  {
+    "objectID": "themes/Wellbeing.html#podcasts",
+    "href": "themes/Wellbeing.html#podcasts",
+    "title": "Mental health",
+    "section": "Podcasts",
+    "text": "Podcasts\n\nNederlandsFrenchEnglish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNederlandsFrenchEnglish"
+  },
+  {
+    "objectID": "themes/Wellbeing.html#references",
+    "href": "themes/Wellbeing.html#references",
+    "title": "Mental health",
+    "section": "References",
+    "text": "References\n\nScientific publicationsPublic reports"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Who we are",
+    "section": "",
+    "text": "Maarten Vansteenkiste\n\nProfessor at Ghent University within the Department of Developmental, Personality and Social Psychology. Inspired by the Self-Determination Theory, he tries to formulate an answer to motivational questions and how the social environment can interact with our motivation and psychosocial well-being. He served as a co-chair of the Psychology and Corona Expert Group and was a member of the GEMS (Crisis Strategy Expert Group for COVID-19).\n\n\n\n\n\n\n\nOmer Van den Bergh\n\nEmeritus Professor of Health Psychology at the Faculty of Psychological and Educational Sciences, KU Leuven since October 2018. His main research interests and expertise focus on the interaction between behaviour and health, (psycho)physiological dysfunction, illness and the relationship with self-reported symptoms. Since the beginning of the crisis, he has been co-chair of the expert group Psychology and Corona.\n\n\n\n\n\n\n\nVincent Yzerbyt\n\nProfessor of social and cultural psychology and statistics and the director of the Social Psychology Lab at UCLouvain. A renowned expert on intergroup relations, social cognition, and stereotypes, his expertise also includes statistics and research methods. As former president of the European Association for Social Psychology, the Crisis Centre liaison for the COVID-19 group of social psychologists and a member of the Psychology and Corona Expert Group and the GEMS+, he contributes to the management of the corona policy by focusing on social psychological dimensions of the COVID-19 pandemic and their impact on health behaviours and vaccine hesitancy.\n\n\n\n\n\n\n\nOlivier Luminet\n\nResearch director at the Fonds de la Recherche Scientifique (FRS- FNRS) and Professor of health and emotion psychology at UCLouvain and ULB. His research focuses on the interactions between 1) emotions, identity, and memory, and 2) emotions, personality and health. Since the COVID-19 pandemic, he has extended his expertise into psychological factors predicting health behaviours. He is a member of the expert group Psychology and Corona and of the Superior Health Council. Furthermore, he is the past president of the Belgian Association for Psychological Sciences(BAPS) and director of the research centre Health, Emotion, Cognition, and Memory.\n\n\n\n\n\n\n\n\n\n\n\nOlivier Klein\n\nProfessor of social psychology at ULB and teaches part-time at the University of Mons. Among other topics of interest (social stereotypes, collective memory, sexism), his research bears on psychological vulnerability to misinformation and belief in conspiracy theories. He works in the expert group Psychology and Corona, is director of the Centre for Social and Cultural Psychology at ULB and co-editor-in- chief of the International Review of Social Psychology.\n\n\n\n\n\n\n\nMathias Schmitz\n\nPostdoctoral researcher at the Faculty of Psychology and Educational Sciences of UCLouvain. He completed his PhD at the same faculty. His research expertise focuses on health psychology, intergroup relations, political psychology, methods, and statistics. Since January 2021, his postdoctorate is dedicated to the study of the relationship between different psychological variables and preventive behaviour in relation to the corona crisis. In this context, he joined the Motivation Barometer team, where he is specifically in charge of data management and analysis.\n\n\n\n\n\n\n\nPascaline Van Oost\n\na master’s degree in social psychology from UCLouvain and is currently a doctoral researcher at the Laboratory of Social Psychology of UCLouvain in collaboration with ULB. Her research focuses on the relationship between prejudice, secularism, intergroup relations, and political psychology and joined ULB as part of the Motivation Barometer team in January 2021. Within the group, her main task is to elaborate, manage, and distribute the questionnaires.\n\n\n\n\n\n\n\nSofie Morbée\n\ngraduated as a clinical psychologist and has been working as a PhD student at Ghent University since 2017. In her doctoral research she studies the role of factors that influence the (de)motivational behaviour of coaches and parents of young athletes. With her expertise in motivation and Self-Determination Theory, she has been contributing to the Motivation Barometer project since the beginning of the pandemic, where she is responsible for the development and distribution of the questionnaire.\n\n\n\n\n\n\n\n\n\n\n\nJoachim Waterschoot\n\ngraduated as an experimental psychologist and obtained a Master of Statistical Data Analysis. He is currently working as a PhD student at Ghent University, conducting research on boredom and how people keep themselves motivated. With a passion for developmental psychology and Self-Determination Theory, his doctoral research is currently dedicated to the Motivation Barometer project. Within this project, he is responsible for the website and data coordination, management, analyses, visualisation and reporting.\n\n\n\n\n\n\n\nEveline Raemdonck\n\ngraduated as a clinical psychologist at Ghent University. With a passion for psychogerontology and care for the elderly, she started a Research Master in Gerontological Sciences at the VUB in 2020. Besides this study, she has been contributing to the Motivation Barometer project since February 2022, where she is responsible for the inventory and organization of the questionnaire.\n\n\n\n\n\n\n\nMarie Brisbois\n\nholds a master’s degree in neuropsychology from the University of Liège. She is interested in many fields of psychology, ranging from intergroup relations, stereotypes, prejudice and the neurophysiological basis of behaviour. Since January 2022, she has been working for the Centre of Social and Cultural Psychology of ULB and joined the team of the Motivation Barometer project. Within this project, she is mainly responsible for the inventory and organization of the questionnaire.\n\n\n\n\n\n\n\nxxxbée\n\nxx"
+  },
+  {
+    "objectID": "posts/news30october2023.html",
+    "href": "posts/news30october2023.html",
+    "title": "New scientific publication",
+    "section": "",
+    "text": "heyyy\n\n\n\n\n\n\n\n\n\n\n\n\nRead the abstract here\n\n\n\n\n\nUpon the outbreak of the SARS-CoV-2 virus, it was clear that the pandemic would not only entail physical but also psychological challenges and threats to individuals’ sustained motivation, behavioral adherence, and mental health. To encourage the Belgian authorities to take these psychological aspects into account, the Motivation Barometer, a large-scale and dynamic survey, was launched in March 2020. Its purpose was to monitor cognitive, affective, and behavioral aspects of citizens’ functioning across the pandemic, with special atten- tion given to motivational and social factors. In the present review, we provide a description of the methodology of the Motivation Barometer, we synthesize the key findings emerg- ing from the Motivation Barometer, we clarify how these findings were used in practice to the benefit of different societal stakeholders (i.e., the broader public, policymakers, intermediate-level organizations, and media), and we high- light its potential contribution for the management of other societal challenges (e.g., climate change, well-being). We conclude that the Motivation Barometer was a critical policy instrument during the SARS-CoV-2 pandemic in Belgium. It helped to bridge the gap between social scientists, policymak- ers, the media, and the general public, and, as such, allowed to demonstrate the incremental value of psychological sciences for society.\n\n\n\nReference:\n\nVansteenkiste, M., Waterschoot, J., Morbée, S., Van Oost, P., Schmitz, M., Klein, O., Luminet, O., Yzerbyt, V., & Van den Bergh, O. (2023). Psychological science and its societal mission during the SARS-CoV-2 pandemic: The Motivation Barometer as an evidence-informed policy instrument in Belgium. Social Issues and Policy Review, 1–30. https://doi.org/10.1111/sipr.12101"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Latest News",
+    "section": "",
+    "text": "An overview of the Motivation Barometer as an evidence-informed policy instrument in Belgium\n\n\n\nOct 30, 2023\n\n\n\n\n\n\n\n\nNo matching items\n\n\nRead more news…"
+  },
+  {
+    "objectID": "index.html#how-it-started",
+    "href": "index.html#how-it-started",
+    "title": "Latest News",
+    "section": "How it started",
+    "text": "How it started\nThe emergence of the SARS-CoV-2 virus required a swift and coordinated response from policymakers to control its spread (World Health Organization, 2020). Policymakers worldwide sought advice from scientific advisory committees, mainly composed of biomedical experts, including virologists, infectious disease specialists, biostatisticians, and epidemiologists. Although individuals’ behavior and adherence to health guidelines are critical in controlling the virus, social scientists, particularly psychologists, were notably underrepresented in advising policymakers with evidence-informed recommendations (Bavel et al. 2020).\nPolicy decisions, although essential for containing the virus, can often be intrusive into people’s lives and conflict with basic psychological needs, such as the need for relatedness (Leary 2022; Ryan and Deci 2017). The unpredictable course of the virus, coupled with the absence of efficient vaccines in 2020 and the gradual vaccine rollout until mid-2021, demanded prolonged adherence efforts from citizens.\nThe Motivation Barometer project was established to contribute to evidence-based COVID-19 policy and address various psychological aspects affecting individuals. This large-scale, dynamic monitoring system tracked psychological functioning across the pandemic through over a hundred measurement waves, starting on March 19, 2020, one day after Belgium’s initial lockdown. The project originated in the Belgian context, but its generic aspects hold relevance for other countries.\n\n\n\n\nSofie Morbée at symposium ‘Psychological science meets policy’ June 2022, Brussels. Pic by Bart Duriez\n\n\n\n\n\n\nMaarten Vansteenkiste at symposium ‘Psychological science meets policy’ June 2022, Brussels. Pic by Bart Duriez"
+  },
+  {
+    "objectID": "index.html#what-is-the-motivation-barometer",
+    "href": "index.html#what-is-the-motivation-barometer",
+    "title": "Latest News",
+    "section": "What is the Motivation Barometer?",
+    "text": "What is the Motivation Barometer?\nThe Motivation Barometer, an extensive online survey conducted throughout the pandemic, metaphorically gauged “psychological pressure” and “morale.” Initially, daily surveys were deployed during Belgium’s strict lockdown, following participants longitudinally for 10 weeks or longer. Subsequently, data collection adapted to evolving pandemic phases, incorporating both consistent modules (e.g., motivation, basic needs) and ad hoc modules (e.g., attitudes toward vaccination, mask usage). This dynamic approach enabled data-driven insights into pivotal psychological aspects for policymakers and the public.\nThe project, encompassing diverse content and populations, explored a range of psychological themes—covering behavioral, motivational, cognitive, emotional, and social aspects. Special attention was given to specific groups, including students, parents, older adults, sportsmen, and unvaccinated individuals. Methodologically, it employed various research designs and statistical methods, including cross-sectional cohorts, longitudinal surveys, experimental designs in vignette and real-life interventions. The study was theory-driven, primarily guided by Self-Determination Theory, while also incorporating insights from risk perception, health communication, governmental trust, and conspiracy thinking. This approach transcended a mere descriptive analysis, aiming to understand the psychological processes influencing adherence to sanitary behaviors, well-being, and vaccination willingness, shedding light on variations in people’s preferences for COVID-related policy options.\n\n\n\n\nVincent Yzerbyt at symposium ‘Psychological science meets policy’ June 2022, Brussels. Pic by Bart Duriez\n\n\n\n\n\n\nAudience at symposium ‘Psychological science meets policy’ June 2022, Brussels. Pic by Bart Duriez"
+  },
+  {
+    "objectID": "index.html#method-and-analytical-approach",
+    "href": "index.html#method-and-analytical-approach",
+    "title": "Latest News",
+    "section": "Method and analytical approach",
+    "text": "Method and analytical approach\nInitially launched in Flanders, the Motivation Barometer expanded to include French language questionnaires and participants from Brussels and Wallonia. Participants were recruited online through social media ads and collaborations with national newspapers. No monetary incentives were provided. A total of 483,778 surveys were completed by 321,495 unique individuals across 110 waves, with an average of 2949 participants per wave. Ad hoc recruitment led to nonrepresentative data, biased towards those with computer and internet access, and motivated individuals. The sample was older, more female, more vaccinated, and more educated than the average Belgian population. To address bias, a weighting procedure was applied based on population statistics, though limitations were acknowledged. Attitudinal data were cautiously presented, and a weighting procedure adjusted for sociodemographic differences. Nonetheless, potential biases and limitations in small datasets were recognized, and the influence of other unmeasured variables on self-selection was acknowledged.\nTo address potential biases, our analysis and presentation of findings focused on structural relations between psychological variables or between sociodemographic and psychological factors, minimizing the impact of data unrepresentativeness. Rather than reporting absolute numbers, we emphasized relative changes over time and presented findings in a differentiated manner for characteristics not included in the weighting procedure. Careful wording and theory-grounded interpretations were employed to prevent inappropriate conclusions and aid understanding among citizens and policymakers."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Scientific publications",
+    "section": "",
+    "text": "AllMotivationTrust and CommunicationRisk PerceptionVaccinationWell-beingTheory and practice"
+  },
+  {
+    "objectID": "themes/Motivation.html#quality-and-lack-of-motivation",
+    "href": "themes/Motivation.html#quality-and-lack-of-motivation",
+    "title": "Motivation and risk perception",
+    "section": "Quality and Lack of motivation",
+    "text": "Quality and Lack of motivation\nMotivation referred to the population’s commitment to adhering to sanitary measures and accepting vaccines, exploring predictive validity and proximal predictors related to motivation. Utilizing a theory-grounded approach rooted in Self-Determination Theory (SDT), the study differentiates types of motivation, ranging from external regulation to integrated regulation, reflecting increasing self-endorsement. Autonomous regulation consistently predicted both concurrent and future adherence to sanitary measures and vaccination, while introjected regulation had short-term benefits, and external regulation exhibited negative outcomes in the long run. Cross-cultural investigations supported the positive association between autonomous regulation and adherence to physical distancing measures.\nA second set of findings demonstrated the critical role of motivation as a precursor to the epidemiological situation, influencing infection rates and hospitalization rates. Autonomous regulation predicted lower infection rates six weeks later, emphasizing the importance of supporting citizens’ self-endorsement for adherence to mitigate infection risks. Similarly, autonomous regulation for vaccination positively predicted vaccination intentions, uptake, and future behavior, highlighting the sustained impact of self-endorsed motivation. Contrarily, external regulation exhibited a backfiring effect over time, particularly concerning booster and annual vaccine intentions. The findings underscore the need for citizens to internalize the significance of public health regulations for long-term engagement.\nThe study also distinguished between two types of amotivation regarding vaccination intentions: distrust-based and effort-based. Distrust-based amotivation negatively impacted vaccine acceptance, concurrently and longitudinally, contributing to increasing reluctance over time. Effort-based amotivation, on the other hand, showed no significant association with vaccination intentions, potentially due to the efficient vaccination process in Belgium. Profiling analyses revealed the heterogeneous nature of unvaccinated individuals, with different groups characterized by varying combinations of reasons for (not) getting vaccinated.\n\nAdherenceMotivation"
+  },
+  {
+    "objectID": "themes/Motivation.html#risk-perception",
+    "href": "themes/Motivation.html#risk-perception",
+    "title": "Motivation and risk perception",
+    "section": "Risk perception",
+    "text": "Risk perception\nSeveral Motivation Barometer studies explored the pivotal role of internalized motivation, particularly examining risk perception as a significant driver. Risk perception, encompassing the likelihood of infection and anticipated severity of symptoms, was assessed concerning both individual and population health. While risk perception is established in health behavior theories, its connection to internalization of health behaviors was novel and investigated within the Motivation Barometer project. Studies revealed that risk perception, especially its severity aspect, played a crucial role in underpinning autonomous regulation for both sanitary measures and vaccination uptake. Notably, risk perception varied over time in response to changing hospitalization rates, influencing the internalization of sanitary measures. In a population-level analysis spanning from July 2020 to March 2022, we found that higher hospitalization load correlated with increased autonomous motivation for adhering to sanitary measures. This effect was mediated by the severity aspect of risk perception, linking daily variation in hospitalization load to daily fluctuations in autonomous motivation. Elevated risk strengthened adherence, but decreased risk made measures seem disproportionate, leading to external regulation.\nThe internalization-enhancing role of risk severity proved robust across different virus variants (alpha, delta, omicron) and among both vaccinated and unvaccinated individuals. Notably, unvaccinated individuals perceived lower risk for severe illness on average, contributing to decreased autonomous motivation and increased reluctance for vaccination. These findings highlight the dynamic nature of risk perception and its impact on the internalization of health behaviors, underscoring the need for nuanced interventions based on evolving risk levels.\n\nRisk perceptionBy vaccination status"
+  },
+  {
+    "objectID": "themes/Motivation.html#podcasts",
+    "href": "themes/Motivation.html#podcasts",
+    "title": "Motivation and risk perception",
+    "section": "Podcasts",
+    "text": "Podcasts\n\n\n\nMotivation\n\nNederlandsFrenchEnglish\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRisk perception\n\nNederlandsFrenchEnglish"
+  },
+  {
+    "objectID": "themes/Motivation.html#references",
+    "href": "themes/Motivation.html#references",
+    "title": "Motivation and risk perception",
+    "section": "References",
+    "text": "References\n\nScientific publicationsPublic reports"
+  },
+  {
+    "objectID": "themes/Contextual.html",
+    "href": "themes/Contextual.html",
+    "title": "Contextual predictors",
+    "section": "",
+    "text": "Some studies delved into distal factors at the societal level, including hospitalization load and measures stringency, while others explored the impact of proximal factors such as trust in political authorities, scientific experts, and healthcare providers’ communication styles. Additionally, social factors linked to lower vaccination rates, such as adherence to conspiracy theories and attitudes toward alternative medicine, were investigated (Bruder & Kunert, 2022; Douglas, 2021; Hornsey, 2020; Pummerer et al., 2022)."
+  },
+  {
+    "objectID": "themes/Contextual.html#hospitalization-load-and-stringency",
+    "href": "themes/Contextual.html#hospitalization-load-and-stringency",
+    "title": "Contextual predictors",
+    "section": "Hospitalization load and stringency",
+    "text": "Hospitalization load and stringency\nIn a population-level analysis spanning from July 2020 to March 2022, we found that higher hospitalization load correlated with increased autonomous motivation for adhering to sanitary measures. This effect was mediated by the severity aspect of risk perception, linking daily variation in hospitalization load to daily fluctuations in autonomous motivation. Another long-term study covering 421 days revealed that the impact of hospitalization load on motivation and well-being depends on the proportionality between stringency of measures and epidemiological conditions. Imbalanced measures, either too strict or too lenient, resulted in lower need satisfaction, autonomous motivation, more controlled motivation, less adherence to sanitary measures, and increased anxiety and depressive symptoms. These findings emphasize the critical distinction between freedom and autonomy, highlighting that perceived risk influences people’s willingness to adhere to safety regulations, which may vary across cultures and societies. In a vignette study during the pandemic, preferences for policy options reflected reciprocal relationships between the stringency of measures, motivation, and risk perception. Younger respondents and those without a partner preferred more contacts during the holiday season for relatedness and autonomy, while those with higher autonomous motivation and risk perception objected, emphasizing the dynamic interplay of these factors in shaping public response to measures."
+  },
+  {
+    "objectID": "themes/Contextual.html#communication-style",
+    "href": "themes/Contextual.html#communication-style",
+    "title": "Contextual predictors",
+    "section": "Communication style",
+    "text": "Communication style\nSeveral studies investigated the communication strategies employed by public health officials and healthcare workers during different phases of the pandemic. These included efforts to promote physical distancing, encourage vaccine uptake, and engage in dialogue with unvaccinated individuals. A global experiment across 89 countries revealed the differential impact of autonomy-supportive, controlling, and no-message conditions on motivation, with autonomy-supportive messages showing partial effectiveness. In a large vignette-based study, communication emphasizing widespread willingness to get vaccinated and protective benefits for others positively influenced vaccination intentions, especially among the initially hesitant. However, the framing of vaccination as a normative and pro-social deed could induce guilt and egoism among some, potentially driving polarization.\nFurthermore, a study focused on communication with unvaccinated individuals found that autonomy-supportive communication from healthcare workers fostered autonomy satisfaction and reflection but did not significantly enhance vaccination intentions compared to controlling communication. The study generated interest among healthcare organizations and contributed to discussions on autonomy support, ethical considerations, and the balance between allowing individual freedom and public health goals. Autonomy-supportive communication involved validating individuals’ perspectives, providing information transparently, and allowing them to make well-informed, self-endorsed decisions about vaccination."
+  },
+  {
+    "objectID": "themes/Contextual.html#trust",
+    "href": "themes/Contextual.html#trust",
+    "title": "Contextual predictors",
+    "section": "Trust",
+    "text": "Trust\nCommunication style from political authorities and healthcare providers significantly influenced participants’ trust, a focus in numerous studies. Trustful relations lead individuals to willingly follow trusted parties without the need for control or monitoring. Trust arises when citizens perceive authorities as competent, benevolent, and truthful. Government trust positively predicted COVID-19 vaccination intentions, while belief in conspiracy theories negatively predicted them. Trust in authorities led to greater ownership of vaccination decisions, while conspiracy theories were linked to external regulation and distrust-based amotivation.\nPerceived government trust likely also promotes greater internalization of sanitary measures. Citizens trusting authorities may view stricter measures as more proportionate to hospitalization rates and risks. Trust plays a critical role in individuals’ threshold for proportionality, dynamically varying based on trust in governmental bodies. Conversely, clinging to conspiracy theories may occur when measures are perceived as disproportionate, interfering with basic psychological needs for autonomy and relatedness.\nThe crucial role of trust extends to medical experts, where trust in medical institutions positively correlated with vaccine acceptance intentions. In contrast, individuals endorsing alternative medicine exhibited lower vaccine acceptance intentions due to higher levels of distrust-based amotivation, rooted in a worldview favoring alternative medicine. Overall, these findings emphasize the significance of legitimacy and trustworthiness in political, moral, and scientific authorities during crises, highlighting the importance of upholding high standards even in non-crisis situations."
+  },
+  {
+    "objectID": "themes/Contextual.html#podcasts",
+    "href": "themes/Contextual.html#podcasts",
+    "title": "Contextual predictors",
+    "section": "Podcasts",
+    "text": "Podcasts\n\nNederlandsFrenchEnglish"
+  },
+  {
+    "objectID": "themes/Contextual.html#references",
+    "href": "themes/Contextual.html#references",
+    "title": "Contextual predictors",
+    "section": "References",
+    "text": "References\n\nScientific publicationsPublic reports"
+  }
+]

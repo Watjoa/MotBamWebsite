@@ -1,0 +1,36 @@
+---
+title: "New scientific publication"
+description: "An overview of the Motivation Barometer as an evidence-informed policy instrument in Belgium"
+author:
+  - name: Joachim Waterschoot
+    url: {}
+date: "10/30/2023"
+image: imagenews30october2023.png
+format: 
+  html:
+    toc: true
+engine: knitr
+---
+
+::: columns
+::: {.column width="45%"}
+heyyy
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+<img src="imagenews30october2023.png" style="border-radius: 10px; width: 100%;"/>
+:::
+:::
+
+::: {.callout-note title="Read the abstract here" collapse="true"}
+Upon the outbreak of the SARS-CoV-2 virus, it was clear that the pandemic would not only entail physical but also psychological challenges and threats to individuals' sustained motivation, behavioral adherence, and mental health. To encourage the Belgian authorities to take these psychological aspects into account, the Motivation Barometer, a large-scale and dynamic survey, was launched in March 2020. Its purpose was to monitor cognitive, affective, and behavioral aspects of citizens' functioning across the pandemic, with special atten- tion given to motivational and social factors. In the present review, we provide a description of the methodology of the Motivation Barometer, we synthesize the key findings emerg- ing from the Motivation Barometer, we clarify how these findings were used in practice to the benefit of different societal stakeholders (i.e., the broader public, policymakers, intermediate-level organizations, and media), and we high- light its potential contribution for the management of other societal challenges (e.g., climate change, well-being). We conclude that the Motivation Barometer was a critical policy instrument during the SARS-CoV-2 pandemic in Belgium. It helped to bridge the gap between social scientists, policymak- ers, the media, and the general public, and, as such, allowed to demonstrate the incremental value of psychological sciences for society.
+:::
+
+Reference:
+
+::: border
+Vansteenkiste, M., Waterschoot, J., Morbée, S., Van Oost, P., Schmitz, M., Klein, O., Luminet, O., Yzerbyt, V., & Van den Bergh, O. (2023). **Psychological science and its societal mission during the SARS-CoV-2 pandemic: The Motivation Barometer as an evidence-informed policy instrument in Belgium.** *Social Issues and Policy Review*, 1--30. <https://doi.org/10.1111/sipr.12101>
+:::

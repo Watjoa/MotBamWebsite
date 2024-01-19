@@ -1,0 +1,156 @@
+---
+title: "Mental health"
+description: "Concern, basic psychological needs and vulnerable groups"
+image: mentalhealth.jpg
+format: 
+  html:
+    toc: true
+    toc_depth: 1
+    toc-location: right
+    toc-title: "On this page:"
+engine: knitr
+bibliography: references.bib
+---
+
+During the SARS-CoV-2 pandemic, especially teenagers and young adults experienced mental health challenges. Monitoring included well-being and ill-being indicators. Mental health deterioration resulted from chronic health concerns and frustration of basic psychological needs. Buffering factors, such as emotion regulation, were explored to understand the heterogeneity in people's mental health.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/11451785"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+## Concerns
+
+Concerns, defined as states of insecurity and apprehension, were highly pertinent during the pandemic, particularly regarding health and the unpredictable evolution of the situation (e.g., Charilaou & Vijaykumar, 2023). Various factors influenced health concerns, including the threat of insufficient hospital capacity, media reports, and personal infection risks. Studies explored the impact of concerns and factors buffering or amplifying their effects. **A week-to-week analysis in the initial 10 weeks of the crisis revealed that higher COVID-19-related concerns were associated with increased ill-being and decreased well-being.** Emotional regulation styles, such as emotional dysregulation and suppression, influenced vulnerability to symptoms of ill-being. Emotional dysregulation amplified the link between weekly concerns and depressive symptoms, while integrative emotion regulation strengthened the association between weekly concerns and anxiety. These findings align with a cross-sectional study during the first lockdown, identifying emotional regulation profiles linked to mental health outcomes (Waterschoot et al., 2022).
+
+In a quasi-experimental study involving school personnel during SARS-CoV-2 outbreaks in schools, weekly saliva testing for virus identification served as a buffer against rising health concerns. However, this did not impact general well-being, and the most significant decreases in health concerns occurred in schools where personnel strongly supported the testing initiative (Van de Casteele et al., 2022).
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/11452044"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+## Basic psychological needs
+
+The SARS-CoV-2 crisis not only heightened individuals' concerns but also posed threats to the satisfaction of basic psychological needs for autonomy, competence, and relatedness. These needs are recognized as vital for mental health within Self-Determination Theory (SDT) and more broadly (Ryan et al., 2021; Vansteenkiste et al., 2020; Fiske, 2018). **The crisis led to frustrations of these basic needs, resulting in experiences of pressure, loneliness, and inadequacy.** For instance, imposed health regulations may have reduced autonomy and relatedness satisfaction, while lockdowns presented opportunities for enhanced need satisfaction through personal interests, skill development, and creative connections with others. The effects on basic needs varied across individuals and over time.
+
+The Motivation Barometer project explored the role of concerns and basic needs in mental health, revealing that, **after controlling for concerns, basic need satisfaction was positively associated with individuals' mental health.** This effect was observed across various populations, including parents, students, and the elderly, highlighting the growth-fostering role of need satisfaction during the pandemic. A longitudinal study spanning two years found that need satisfaction served as a source of resilience, predicting lower health concerns and mitigating the impact of such concerns on symptoms of depression and anxiety. Leveraging these insights, successful e-health interventions were developed to foster need crafting, need satisfaction, and mental health in adults and university students.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/11451892"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+## Vulnerable groups
+
+The basic psychological needs framework sheds light on societal disparities during the crisis. **Young adults reported poorer mental health** due to heightened frustration of their needs for relatedness and autonomy. The observed polarization between vaccinated and unvaccinated individuals, as well as the rebellious attitude of some unvaccinated persons, can be attributed to increased social exclusion and autonomy frustration experienced by the latter group. **The introduction of the COVID-19 certificate particularly impacted the autonomy and relatedness needs of unvaccinated individuals**, contributing to reactance. (Waterschoot, Morbée, Soenens, et al., 2023; de Figueiredo & Larson, 2021; Waterschoot, Yzerbyt, et al., 2023; Van Petegem et al., 2015).
+
+## Podcasts
+
+::: panel-tabset
+### Nederlands
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7b3apsw87RrnAVX6cdJgXP?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### French
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0MJhjsSmEWYKLdjgnjxWHY?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### English
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/65v5rxTXpmnI7wwo838h8D?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+:::
+
+::: panel-tabset
+### Nederlands
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3HMPawjhMn9CS4ELA9h4Qj?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### French
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1jza4f8SBYghBvrAm1wGZb?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+
+### English
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1aJ7MZI301RdXmld7bIXfS?utm_source=generator&amp;t=0" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+</iframe>
+:::
+
+## References
+
+::: panel-tabset
+### Scientific publications
+
+```{r echo=FALSE, warning=FALSE}
+
+df <- readxl::read_xlsx('citations.xlsx',sheet = 2)
+df <- as.data.frame(df)
+library(DT)
+df$Year <- as.numeric(df$Year)
+df <- df[order(df$Year,decreasing=TRUE),]
+df$Year <- as.integer(df$Year)
+df$`Main topic` <- as.factor(df$`Main topic`)
+
+
+dfsub <- df[which(df$`Main topic`=="Motivation"|
+                    df$`Main topic`=="Risk perception"|
+                    df$`Main topic`=="Vaccination"),]
+dfsub <- dfsub[,-which(colnames(dfsub)=='Main topic')]
+
+datatable(dfsub,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = FALSE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(dfsub), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
+
+```
+
+### Public reports
+
+```{r echo=FALSE, warning=FALSE}
+df <- readxl::read_xlsx('citations.xlsx',sheet = 1)
+df <- as.data.frame(df)
+library(DT)
+df$Date <- as.Date(df$Date)
+
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+          filter = 'top',
+          rownames = TRUE,
+          extensions = c('Buttons','ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+            order = list(list(2, 'desc')),
+            pageLength = 40,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px')
+
+
+```
+:::

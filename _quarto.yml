@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  #title: "Motivation Barometer"
+  favicon: logoe.png
+  # google-analytics:
+  #   tracking-id: "G-XXXXXXX"
+  #   anonymize-ip: true
+  #site-url: https://example.com
+  #margin-header: subscribe.html
+  search:
+    location: navbar
+    type: textbox
+  page-footer: 
+    center: "Copyright 2023, Joachim Waterschoot"
+    background: light
+  navbar:
+    logo: "logoe.png"
+    style: "docked"
+    pinned: true
+    right:
+      - href: reports.qmd
+        text: REPORTS
+      - href: publications.qmd
+        text: PUBLICATIONS
+      - href: media.qmd
+        text: MEDIA
+      - href: contact.qmd
+        text: ABOUT
+    tools:
+    # - icon: twitter
+    #   href: https://twitter.com
+    - icon: github
+      menu:
+        - text: Report a Bug
+          url:  https://bugs.com
+
+format:
+  html:
+    theme: cosmo #flatly #simplex
+    smooth-scroll: true
+    css: styles.css
+    toc: true
+    grid:
+      sidebar-width: 200px
+      body-width: 1100px
+      margin-width: 200px
+
+editor: visual
+
